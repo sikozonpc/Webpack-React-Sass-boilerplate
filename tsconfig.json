@@ -8,6 +8,7 @@
 		"allowJs": true,
 		"noEmit": true,
     "strict": true,
+    "skipLibCheck": true,
 		"isolatedModules": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -16,7 +17,6 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
-    "skipLibCheck": true,
     "jsx": "react",
     "baseUrl": ".",
     "paths": {

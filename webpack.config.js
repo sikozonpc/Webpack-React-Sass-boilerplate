@@ -1,7 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
 
 module.exports = {
@@ -25,7 +24,6 @@ module.exports = {
         use: [
           // Creates `style` nodes from JS strings
           'style-loader',
-          MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           'css-loader',
           {
@@ -51,13 +49,16 @@ module.exports = {
         enforce: "pre"
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: 'assets/images/[name]-[hash].[ext]',
+            },
           },
         ],
-      }
+      },
     ]
   },
   plugins: [
