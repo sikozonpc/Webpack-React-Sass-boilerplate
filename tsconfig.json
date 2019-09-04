@@ -1,0 +1,35 @@
+{
+	"compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+		"allowJs": true,
+		"noEmit": true,
+    "strict": true,
+		"isolatedModules": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    }
+	},
+	"include": [
+		"src"
+	],
+  "exclude": [
+    "**/node_modules/**",
+    "dist"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.0",
+    "@types/react-router-dom": "4.3.5",
+    "babel-preset-react": "6.24.1",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-redux": "7.1.1",
+    "react-router-dom": "5.0.1",
+    "redux": "4.0.4",
+    "webpack-dev-server": "3.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/plugin-proposal-class-properties": "7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/plugin-transform-runtime": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@types/enzyme": "3.10.3",
+    "@types/enzyme-adapter-react-16": "1.0.5",
+    "@types/jest": "24.0.18",
+    "@typescript-eslint/eslint-plugin": "2.1.0",
+    "@typescript-eslint/parser": "2.1.0",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "8.0.6",
+    "css-hot-loader": "1.4.4",
+    "css-loader": "^3.2.0",
+    "dotenv-webpack": "1.7.0",
+    "eslint": "6.3.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-node": "9.2.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-standard": "4.0.1",
+    "file-loader": "4.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "mini-css-extract-plugin": "0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "3.0.0",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "0.2.4",
+    "style-loader": "^1.0.0",
+    "ts-jest": "24.0.2",
+    "ts-loader": "6.0.4",
+    "typescript": "3.5.3",
+    "webpack": "4.39.3",
+    "webpack-cli": "3.3.7"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      ".+\\.tsx?$": "ts-jest"
+    }
+  }
+}
