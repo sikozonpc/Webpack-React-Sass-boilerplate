@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
@@ -5,16 +7,31 @@ const autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
+  devServer: {
+    port: 3000,
+    host: '0.0.0.0',
+    contentBase: path.resolve(__dirname, 'src'),
+    publicPath: '/',
+    historyApiFallback: true,
+    noInfo: false,
+    inline: true,
+    hot: true,
+    stats: {
+      modules: false,
+      colors: true,
+    },
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', 'jsx'],
     modules: [
       path.resolve(__dirname, 'src'),
       'node_modules',
-    ]
+    ],
   },
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.min.js'
+    filename: 'bundle.min.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -29,8 +46,9 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
+              // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
               plugins: () => ([autoprefixer()]),
-            }
+            },
           },
           // Compiles Sass to CSS
           'sass-loader',
@@ -45,8 +63,8 @@ module.exports = {
       },
       {
         test: /\.(js|ts)x?$/,
-        use: ["source-map-loader"],
-        enforce: "pre"
+        use: ['source-map-loader'],
+        enforce: 'pre',
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -59,13 +77,24 @@ module.exports = {
           },
         ],
       },
-    ]
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: 'assets/fonts/[name]-[hash].[ext]',
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new Dotenv(),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: 'public/index.html',
     }),
-    new MiniCssExtractPlugin('index.css')
-  ]
+  ],
 }

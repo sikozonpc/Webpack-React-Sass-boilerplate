@@ -7,10 +7,6 @@ Or for those who dont want to configure anything and want a leightweight alterna
 
 ## Instalation
 
-`npm i`
-
-or
-
 `yarn`
 
 ### Contributors

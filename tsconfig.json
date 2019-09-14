@@ -25,11 +25,15 @@
       ]
     }
 	},
-	"include": [
-		"src"
+	"includes": [
+    "src",
+    "**/*.tsx",
+    "**/*.ts",
+    "**/*.js"
 	],
   "exclude": [
     "**/node_modules/**",
-    "dist"
+    "dist",
+    "coverage"
   ]
 }
