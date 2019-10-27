@@ -1,15 +1,15 @@
 {
-	"compilerOptions": {
-    "module": "commonjs",
+  "compilerOptions": {
+    "module": "esnext",
     "target": "esnext",
     "sourceMap": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-		"allowJs": true,
-		"noEmit": true,
+    "allowJs": true,
+    "noEmit": true,
     "strict": true,
     "skipLibCheck": true,
-		"isolatedModules": false,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
@@ -24,13 +24,13 @@
         "src/*"
       ]
     }
-	},
-	"includes": [
+  },
+  "includes": [
     "src",
     "**/*.tsx",
     "**/*.ts",
     "**/*.js"
-	],
+  ],
   "exclude": [
     "**/node_modules/**",
     "dist",

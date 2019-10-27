@@ -12,3 +12,10 @@ node_modules
 
 # Prod Bundle
 build
+dist
+
+# Env variables
+.env
+
+# Others
+TODO

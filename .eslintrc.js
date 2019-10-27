@@ -8,7 +8,7 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: ["@typescript-eslint", "react", "jsx-a11y" ],
+  plugins: ["@typescript-eslint", "react", "jsx-a11y"],
   env: {
     browser: true,
     es6: true,
@@ -32,7 +32,7 @@ module.exports = {
     "react": {
       "version": "detect"
     }
-},
+  },
   rules: {
     'semi': ['error', 'never'],
     'prefer-const': 'error',

@@ -6,7 +6,7 @@ const Dotenv = require('dotenv-webpack')
 const autoprefixer = require('autoprefixer')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'index.tsx'),
   devServer: {
     port: 3000,
     host: '0.0.0.0',
@@ -35,7 +35,6 @@ module.exports = {
   },
   module: {
     rules: [
-
       {
         test: /\.s[ac]ss$/i,
         use: [

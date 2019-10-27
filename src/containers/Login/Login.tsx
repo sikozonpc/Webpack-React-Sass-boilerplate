@@ -1,5 +1,4 @@
 import * as React from 'react'
-import routes from './routes'
 
 import { Layout } from './styles'
 
@@ -10,7 +9,7 @@ import { Layout } from './styles'
 const App: React.FC = () => {
   return (
     <Layout>
-      {routes()}
+      <p>Login Screen</p>
     </Layout>
   )
 }
